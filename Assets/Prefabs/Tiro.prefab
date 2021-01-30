@@ -99,7 +99,7 @@ MonoBehaviour:
   velocidadeMovIni: 3
   velocidadeRot: 1
   accel: 0
-  modoControle: 2
+  modoControle: 1
 --- !u!60 &8099470424348207844
 PolygonCollider2D:
   m_ObjectHideFlags: 0

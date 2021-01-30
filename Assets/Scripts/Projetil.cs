@@ -4,33 +4,44 @@ using UnityEngine;
 
 public class Projetil : MonoBehaviour
 {
-    public enum TipoControle
+
+    public enum TipoControle    
     {
         Mouse,
         Teclado,
         Random
     }
-
     public float velocidadeMovIni;
     public float velocidadeRot;
     public float accel;
 
-    private float currentVelMov;
-
     public TipoControle modoControle;
+
+    private float currentVelMov;
+    private Vector3 screenPoint;
+    private Vector3 offset;
+    private bool isDraged;
+
+    private Vector3 PosAnterior;
     //public gameobject player;
 
     void Start()
     {
         //transform.LookAt(player)
         currentVelMov = velocidadeMovIni;
+        
+        PosAnterior = transform.position;
+
+        isDraged = false;
     }
 
     void Update()
     {
-        //andar para frente
-        transform.Translate(0,currentVelMov * Time.deltaTime,0, Space.Self);
-        
+        //andar para frente se não estiver arrastado
+        if (!isDraged)
+        {
+            transform.Translate(0,currentVelMov * Time.deltaTime,0, Space.Self);
+        }
         //girar por teclado
         if (modoControle == TipoControle.Teclado)
         {
@@ -60,10 +71,19 @@ public class Projetil : MonoBehaviour
              }
             }
         }
+
+        if (modoControle == TipoControle.Mouse)
+        {
+            if(PosAnterior != transform.position)
+            {
+                transform.right = Vector3.LerpUnclamped(PosAnterior - transform.position,transform.position - PosAnterior, 0.01f);
+                transform.Rotate(0,0,90);
+            }
+        }
+        PosAnterior = transform.position;
             
         //aceleração    
         currentVelMov += accel;
-        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -71,8 +91,34 @@ public class Projetil : MonoBehaviour
         Debug.Log("Destruiu");
         Destroy(gameObject);
     }
-    public void setModoControle(TipoControle novoModo)
+
+
+    //girar puxando com mouse
+    void OnMouseDown() {
+        if (modoControle == TipoControle.Mouse)
+        {
+            isDraged = true;
+            Physics.queriesHitTriggers = true;
+            offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
+        }
+    }
+
+    void OnMouseDrag()
     {
-        modoControle = novoModo;
+        isDraged = true;
+        if (modoControle == TipoControle.Mouse)
+        {
+            Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
+            Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
+            if (gameObject != null)
+            {
+                transform.position = curPosition;
+            }
+        }
+    }
+
+    void OnMouseUp()
+    {
+        isDraged = false;
     }
 }
