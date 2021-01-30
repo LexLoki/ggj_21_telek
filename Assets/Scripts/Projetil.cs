@@ -5,16 +5,33 @@ using UnityEngine;
 public class Projetil : MonoBehaviour
 {
 
-    public float velocidade;
-    // Start is called before the first frame update
+    public float velocidadeMovIni;
+    public float velocidadeRot;
+    public float accel;
+
+    private float currentVelMov;
+    //public gameobject player;
+
     void Start()
     {
-        
+        //transform.LookAt(player)
+        currentVelMov = velocidadeMovIni;
     }
 
-    // Update is called once per frame
     void Update()
     {
+        transform.Translate(0,currentVelMov * Time.deltaTime,0, Space.Self);
         
+        
+        if (Input.GetKey("z") || Input.GetKey("left"))
+        {
+            transform.Rotate(0,0,1 * velocidadeRot);
+        }
+        if (Input.GetKey("x") || Input.GetKey("right"))
+        {
+            transform.Rotate(0,0,-1 * velocidadeRot);
+        }
+
+        currentVelMov += accel;
     }
 }
