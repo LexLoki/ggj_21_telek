@@ -15,7 +15,7 @@ public class Projetil : MonoBehaviour
     public float velocidadeRot;
     public float accel;
 
-    public TipoControle modoControle;
+    //public TipoControle modoControle;
 
     private float currentVelMov;
     private Vector3 screenPoint;
@@ -43,20 +43,20 @@ public class Projetil : MonoBehaviour
             transform.Translate(0,currentVelMov * Time.deltaTime,0, Space.Self);
         }
         //girar por teclado
-        if (modoControle == TipoControle.Teclado)
-        {
-            if (Input.GetKey("z") || Input.GetKey("left"))
+        //if (modoControle == TipoControle.Teclado)
+        //{
+            if (Input.GetKey("z") || Input.GetKey("q") || Input.GetKey("left"))
             {
                 transform.Rotate(0,0,1 * velocidadeRot);
             }
-            if (Input.GetKey("x") || Input.GetKey("right"))
+            if (Input.GetKey("x") || Input.GetKey("e") || Input.GetKey("right"))
             {
                 transform.Rotate(0,0,-1 * velocidadeRot);
             }
-        }
+        //}
 
         //girar aleatoriamente por mouse
-        if (modoControle == TipoControle.Random)
+        /*if (modoControle == TipoControle.Random)
         {
             if (Input.GetMouseButtonDown(0)) 
             {
@@ -70,16 +70,16 @@ public class Projetil : MonoBehaviour
                     hit.collider.attachedRigidbody.transform.Rotate(0,0,Random.Range(0,360));
              }
             }
-        }
+        }*/
 
-        if (modoControle == TipoControle.Mouse)
-        {
-            if(PosAnterior != transform.position)
+        //if (modoControle == TipoControle.Mouse)
+        //{
+            if( isDraged && PosAnterior != transform.position)
             {
                 transform.right = Vector3.LerpUnclamped(PosAnterior - transform.position,transform.position - PosAnterior, 0.01f);
                 transform.Rotate(0,0,90);
             }
-        }
+        //}
         PosAnterior = transform.position;
             
         //aceleração    
@@ -96,18 +96,18 @@ public class Projetil : MonoBehaviour
 
     //girar puxando com mouse
     void OnMouseDown() {
-        if (modoControle == TipoControle.Mouse)
-        {
+        //if (modoControle == TipoControle.Mouse)
+        //{
             isDraged = true;
             Physics.queriesHitTriggers = true;
             offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
-        }
+        //}
     }
 
     void OnMouseDrag()
     {
-        if (modoControle == TipoControle.Mouse)
-        {
+        //if (modoControle == TipoControle.Mouse)
+        //{
             isDraged = true;
             Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
             Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
@@ -115,7 +115,7 @@ public class Projetil : MonoBehaviour
             {
                 transform.position = curPosition;
             }
-        }
+        //}
     }
 
     void OnMouseUp()
