@@ -6,6 +6,7 @@ public class Atirador : MonoBehaviour
 {
     public GameObject projetil;
     public float intervalo;
+    public Vector3 rotacaoProjetil;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +22,10 @@ public class Atirador : MonoBehaviour
     IEnumerator EsperaTiro()
     {
         yield return new WaitForSeconds(intervalo);
-        Instantiate(projetil,transform.position,Quaternion.identity);
+        Object projectile = Instantiate(projetil,transform.position,Quaternion.Euler(rotacaoProjetil.x,rotacaoProjetil.y,rotacaoProjetil.z));
+
+        
+
         StartCoroutine(EsperaTiro());
     }
 }

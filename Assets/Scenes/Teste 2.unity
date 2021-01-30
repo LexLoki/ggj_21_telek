@@ -3462,6 +3462,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 208276129}
     m_Modifications:
+    - target: {fileID: 887026736023570360, guid: 10f81c5bea6d7ec479699e56c49e1d29,
+        type: 3}
+      propertyPath: rotacaoProjetil.z
+      value: -90
+      objectReference: {fileID: 0}
     - target: {fileID: 887026736023570361, guid: 10f81c5bea6d7ec479699e56c49e1d29,
         type: 3}
       propertyPath: m_Name
@@ -4600,6 +4605,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 775674389}
     m_Modifications:
+    - target: {fileID: 887026736023570360, guid: 10f81c5bea6d7ec479699e56c49e1d29,
+        type: 3}
+      propertyPath: rotacaoProjetil.z
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 887026736023570361, guid: 10f81c5bea6d7ec479699e56c49e1d29,
         type: 3}
       propertyPath: m_Name
