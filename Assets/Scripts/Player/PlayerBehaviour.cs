@@ -7,6 +7,8 @@ public class PlayerBehaviour : MonoBehaviour
 
     public CharacterController2D CharacterController;
 
+    public Animator SpriteAnimator;
+
     public float Speed;
 
     private float _dir;
@@ -23,5 +25,9 @@ public class PlayerBehaviour : MonoBehaviour
         float vel = _dir * Speed;
 
         CharacterController.Move(vel, false, _doJump);
+
+        SpriteAnimator.SetBool("grounded", CharacterController.IsGrounded);
+        SpriteAnimator.SetBool("moving", vel != 0f);
+        SpriteAnimator.SetFloat("vel_y", CharacterController.Velocity.y);
     }
 }
