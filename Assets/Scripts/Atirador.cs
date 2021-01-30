@@ -21,7 +21,6 @@ public class Atirador : MonoBehaviour
     IEnumerator EsperaTiro()
     {
         yield return new WaitForSeconds(intervalo);
-        Debug.Log("Fogo!");
         Instantiate(projetil,transform.position,Quaternion.identity);
         StartCoroutine(EsperaTiro());
     }
