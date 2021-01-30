@@ -5,9 +5,11 @@ using UnityEngine;
 public class DrawRect : MonoBehaviour
 {
     public Vector2 Size;
+    public bool Enabled = true;
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawCube(transform.position, new Vector3(Size.x, Size.y, 1f));
+        if(Enabled)
+            Gizmos.DrawCube(transform.position, new Vector3(Size.x, Size.y, 1f));
     }
 }
