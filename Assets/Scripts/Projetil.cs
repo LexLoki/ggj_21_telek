@@ -105,9 +105,9 @@ public class Projetil : MonoBehaviour
 
     void OnMouseDrag()
     {
-        isDraged = true;
         if (modoControle == TipoControle.Mouse)
         {
+            isDraged = true;
             Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
             Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
             if (gameObject != null)
