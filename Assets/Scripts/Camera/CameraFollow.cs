@@ -28,7 +28,7 @@ public class CameraFollow : MonoBehaviour
     {
         _camera = GetComponent<Camera>();
         originalTarget = target;
-        targetSize = _camera.orthographicSize;
+        _camera.orthographicSize = targetSize;
     }
 
     // Update is called once per frame
