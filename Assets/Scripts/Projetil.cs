@@ -86,10 +86,10 @@ public class Projetil : MonoBehaviour
         currentVelMov += accel;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
         //if(other.tag != "Botao")
-        if (other.tag == "Player")
+        if (other.collider.tag == "Player")
         {
             Destroy(other.gameObject);
         }

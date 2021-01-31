@@ -2206,6 +2206,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Botao
       objectReference: {fileID: 0}
+    - target: {fileID: 4456068767525613682, guid: eb5691d8c42e78f4b99f9a080b4ce822,
+        type: 3}
+      propertyPath: porta
+      value: 
+      objectReference: {fileID: 157960775}
     - target: {fileID: 4456068767525613685, guid: eb5691d8c42e78f4b99f9a080b4ce822,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3371,7 +3376,7 @@ PrefabInstance:
     - target: {fileID: 6811137737604562579, guid: d529f7d1550cac040898748ad06d1e2b,
         type: 3}
       propertyPath: velocidadeRot
-      value: -0.5
+      value: -0.3
       objectReference: {fileID: 0}
     - target: {fileID: 6811137737604562580, guid: d529f7d1550cac040898748ad06d1e2b,
         type: 3}
@@ -7397,7 +7402,7 @@ PrefabInstance:
     - target: {fileID: 6811137737604562579, guid: d529f7d1550cac040898748ad06d1e2b,
         type: 3}
       propertyPath: velocidadeRot
-      value: -0.3
+      value: -0.15
       objectReference: {fileID: 0}
     - target: {fileID: 6811137737604562580, guid: d529f7d1550cac040898748ad06d1e2b,
         type: 3}

@@ -7,9 +7,9 @@ public class Breakable : MonoBehaviour
     public int health = 1;
     // Start is called before the first frame update
     
-    void OnCollisionEnter2D(Collider2D outro)
+    void OnCollisionEnter2D(Collision2D outro)
     {
-        if(outro.tag == "Projetil")
+        if(outro.collider.tag == "Projetil")
         {
             health -= 1;
             if (health <= 0)
