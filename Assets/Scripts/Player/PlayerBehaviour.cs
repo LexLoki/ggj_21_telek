@@ -27,9 +27,9 @@ public class PlayerBehaviour : MonoBehaviour
 
         CharacterController.Move(vel, false, _doJump);
 
-        SpriteAnimator.SetBool("grounded", CharacterController.IsGrounded);
-        SpriteAnimator.SetBool("moving", vel != 0f);
-        SpriteAnimator.SetFloat("vel_y", CharacterController.Velocity.y);
+        //SpriteAnimator.SetBool("grounded", CharacterController.IsGrounded);
+        //SpriteAnimator.SetBool("moving", vel != 0f);
+        //SpriteAnimator.SetFloat("vel_y", CharacterController.Velocity.y);
     }
 
     void OnDestroy()

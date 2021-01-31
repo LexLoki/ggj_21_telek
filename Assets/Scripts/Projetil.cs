@@ -101,6 +101,7 @@ public class Projetil : MonoBehaviour
     void OnMouseDown() {
         //if (modoControle == TipoControle.Mouse)
         //{
+            Debug.Log("Clickado");
             isDraged = true;
             Physics.queriesHitTriggers = true;
             offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
