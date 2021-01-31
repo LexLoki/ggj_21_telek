@@ -23,17 +23,23 @@ public class CameraFollow : MonoBehaviour
 
     private float x_lock = 0;
     private float y_lock = 0;
+    private Vector3 LastPos;
 
     private void Start()
     {
         _camera = GetComponent<Camera>();
         originalTarget = target;
         _camera.orthographicSize = targetSize;
+        LastPos = target.position;
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
+        if (target != null)
+        {
+            LastPos = target.position;
+        }
         switch (currentState)
         {
             case CameraStates.Follow:
@@ -48,8 +54,15 @@ public class CameraFollow : MonoBehaviour
     private void followBehaviour()
     {
         Vector3 pos = transform.position;
-        Vector3 t_pos = target.position;
-
+        Vector3 t_pos;
+        if (target== null)
+        {
+            t_pos = LastPos;
+        }
+        else
+        {
+            t_pos = target.position;
+        }
         if (x_lock != 0)
             t_pos.x = x_lock;
         if (y_lock != 0)

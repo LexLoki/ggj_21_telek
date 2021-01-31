@@ -89,7 +89,10 @@ public class Projetil : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         //if(other.tag != "Botao")
-        Debug.Log("Destruiu");
+        if (other.tag == "Player")
+        {
+            Destroy(other.gameObject);
+        }
         Destroy(gameObject);
     }
 

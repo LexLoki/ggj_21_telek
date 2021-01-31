@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Projetil
   - Botao
+  - Respawner
   layers:
   - Default
   - TransparentFX

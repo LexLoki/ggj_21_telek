@@ -11,6 +11,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     public float Speed;
 
+    public GameObject GameOverScreen;
     private float _dir;
     private bool _doJump;
     
@@ -29,5 +30,10 @@ public class PlayerBehaviour : MonoBehaviour
         SpriteAnimator.SetBool("grounded", CharacterController.IsGrounded);
         SpriteAnimator.SetBool("moving", vel != 0f);
         SpriteAnimator.SetFloat("vel_y", CharacterController.Velocity.y);
+    }
+
+    void OnDestroy()
+    {
+        GameOverScreen.SetActive(true);
     }
 }
