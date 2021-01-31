@@ -7,7 +7,7 @@ public class Atirador : MonoBehaviour
     public GameObject projetil;
     public float intervalo;
     public Vector3 rotacaoProjetil;
-    public float velocidadeProjetil;
+    public float velocidadeProjetil = 3;
     // Start is called before the first frame update
     void Start()
     {
