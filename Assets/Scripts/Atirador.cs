@@ -7,6 +7,7 @@ public class Atirador : MonoBehaviour
     public GameObject projetil;
     public float intervalo;
     public Vector3 rotacaoProjetil;
+    public float velocidadeProjetil;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,9 +23,8 @@ public class Atirador : MonoBehaviour
     IEnumerator EsperaTiro()
     {
         yield return new WaitForSeconds(intervalo);
-        Object projectile = Instantiate(projetil,transform.position,Quaternion.Euler(rotacaoProjetil.x,rotacaoProjetil.y,rotacaoProjetil.z));
-
-        
+        GameObject projectile = Instantiate(projetil,transform.position,Quaternion.Euler(rotacaoProjetil.x,rotacaoProjetil.y,rotacaoProjetil.z));
+    	projectile.GetComponent<Projetil>().velocidadeMovIni = velocidadeProjetil;        
 
         StartCoroutine(EsperaTiro());
     }
