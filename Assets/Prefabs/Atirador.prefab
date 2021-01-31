@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 87e76778127c5a9469880649fcf45b4e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8d6d7698479366c43b4895bddc761192, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,3 +97,5 @@ MonoBehaviour:
   projetil: {fileID: 8146157101964607986, guid: e3f5baa67b0444b4b962c5f5cb541c8d,
     type: 3}
   intervalo: 3
+  rotacaoProjetil: {x: 0, y: 0, z: 0}
+  velocidadeProjetil: 3
