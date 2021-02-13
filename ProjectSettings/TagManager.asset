@@ -44,3 +44,24 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: "C\xE9u"
+    uniqueID: 3334103555
+    locked: 0
+  - name: Deserto
+    uniqueID: 566142039
+    locked: 0
+  - name: Vidro
+    uniqueID: 342537401
+    locked: 0
+  - name: "Vegeta\xE7\xE3o"
+    uniqueID: 1676265661
+    locked: 0
+  - name: Grama
+    uniqueID: 1738304039
+    locked: 0
+  - name: Colider
+    uniqueID: 3815681587
+    locked: 0
+  - name: Grama primeiro plano
+    uniqueID: 1949277217
+    locked: 0
