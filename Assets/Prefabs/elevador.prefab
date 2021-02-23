@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &887026736023570361
+--- !u!1 &1247006649032077486
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,37 +8,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 887026736023570362}
-  - component: {fileID: 887026736023570363}
-  - component: {fileID: 887026736023570360}
+  - component: {fileID: 3013628008723130890}
+  - component: {fileID: 7079282684425877745}
+  - component: {fileID: 4097635583414868145}
+  - component: {fileID: 1518019155015126279}
   m_Layer: 0
-  m_Name: Atirador
+  m_Name: elevador
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &887026736023570362
+--- !u!4 &3013628008723130890
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 887026736023570361}
+  m_GameObject: {fileID: 1247006649032077486}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6, y: -3, z: 0}
-  m_LocalScale: {x: 0.23918353, y: 0.23918353, z: 0.47836706}
+  m_LocalPosition: {x: 6.116867, y: -4.4137993, z: 6875.6846}
+  m_LocalScale: {x: 0.603, y: 0.603, z: 0.603}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &887026736023570363
+--- !u!212 &7079282684425877745
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 887026736023570361}
+  m_GameObject: {fileID: 1247006649032077486}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -50,7 +51,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -71,31 +72,54 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8d6d7698479366c43b4895bddc761192, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 924491103292c0b41b8110b6e34e0a15, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 4.34, y: 5.29}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &887026736023570360
+--- !u!114 &4097635583414868145
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 887026736023570361}
-  m_Enabled: 1
+  m_GameObject: {fileID: 1247006649032077486}
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8f22f6a313a2444b8feffe46434b5b0, type: 3}
+  m_Script: {fileID: 11500000, guid: 5121b7a8c02024b32971f34abd45c26b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projetil: {fileID: 8146157101964607986, guid: e3f5baa67b0444b4b962c5f5cb541c8d,
-    type: 3}
-  intervalo: 3
-  rotacaoProjetil: {x: 0, y: 0, z: 0}
-  velocidadeProjetil: 3
+  velocidade: 0
+  destino: {x: 157.42, y: -25.7, z: 0}
+--- !u!61 &1518019155015126279
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1247006649032077486}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.012541771, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.34, y: 5.29}
+    newSize: {x: 4.34, y: 5.29}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.3107023, y: 5.29}
+  m_EdgeRadius: 0
