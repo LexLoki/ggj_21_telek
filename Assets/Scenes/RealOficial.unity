@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -6954,7 +6954,7 @@ PrefabInstance:
     - target: {fileID: 7286225814332850342, guid: 2a0741fa4fb32f04599ec9accc15e70d,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7286225814332850342, guid: 2a0741fa4fb32f04599ec9accc15e70d,
         type: 3}
@@ -12123,7 +12123,7 @@ MonoBehaviour:
       bevelSize: 0
       spriteIndex: 0
       corner: 1
-  m_SpriteShape: {fileID: 0}
+  m_SpriteShape: {fileID: 11400000, guid: ed9f3761b64f44b0eb6c8a74431bed09, type: 2}
   m_FillPixelPerUnit: 100
   m_StretchTiling: 1
   m_SplineDetail: 16
@@ -12153,7 +12153,7 @@ SpriteShapeRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RenderingLayerMask: 2
+  m_RenderingLayerMask: 3
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: ff5c10d0880519341aa8535cc11ff6f1, type: 2}
@@ -12177,10 +12177,10 @@ SpriteShapeRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -479285709
   m_SortingLayer: 7
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Color: {r: 0, g: 0.1792453, b: 0.052190445, a: 1}
   m_MaskInteraction: 0
-  m_ShapeTexture: {fileID: 0}
+  m_ShapeTexture: {fileID: 2800000, guid: 87e76778127c5a9469880649fcf45b4e, type: 3}
   m_Sprites: []
   m_LocalAABB:
     m_Center: {x: 0.13224792, y: -10.006409, z: 0}
