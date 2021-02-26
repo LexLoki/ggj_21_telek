@@ -91,10 +91,10 @@ public class Projetil : MonoBehaviour
         //if(other.tag != "Botao")
         if (other.collider.tag == "Player")
         {
-            Destroy(other.gameObject);
+            //Destroy(other.gameObject);
         }
         
-        Debug.Log("Tiro bateu em "+ other.collider.name);
+        //Debug.Log("Tiro bateu em "+ other.collider.name);
         Destroy(gameObject);
     }
 

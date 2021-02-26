@@ -21,13 +21,4 @@ public class Slide : MonoBehaviour
     {
         rb2D.MovePosition(Vector3.LerpUnclamped(PosIni,PosAlvo,Mathf.Sin(Time.time * velocidade)));
     }
-
-    void OnCollisionStay2D(Collision2D other)
-    {
-        if(other.gameObject.tag == "Player")
-        {
-            Vector3 offset = (other.gameObject.transform.position - this.gameObject.transform.position);
-
-        }
-    }
 }

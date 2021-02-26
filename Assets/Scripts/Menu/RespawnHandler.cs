@@ -27,7 +27,7 @@ public class RespawnHandler : MonoBehaviour
     private void RespawnPlayer()
     {
         GameObject newPlayer = Instantiate(PlayerPrefab,RespawnPos,Quaternion.identity);
-        newPlayer.GetComponent<PlayerBehaviour>().GameOverScreen = GameOverScreen;
+        //newPlayer.GetComponent<PlayerBehaviour>().GameOverScreen = GameOverScreen;
         Camera.GetComponent<CameraFollow>().target = newPlayer.transform;
         GameOverScreen.SetActive(false);
     }

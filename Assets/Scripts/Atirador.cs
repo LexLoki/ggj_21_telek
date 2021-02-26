@@ -24,7 +24,7 @@ public class Atirador : MonoBehaviour
     {
         yield return new WaitForSeconds(intervalo);
         GameObject projectile = Instantiate(projetil,transform.position,Quaternion.Euler(rotacaoProjetil.x,rotacaoProjetil.y,rotacaoProjetil.z));
-        Debug.Log(gameObject.name + " atirou um projetil");
+        //Debug.Log(gameObject.name + " atirou um projetil");
     	projectile.GetComponent<Projetil>().velocidadeMovIni = velocidadeProjetil;        
 
         StartCoroutine(EsperaTiro());

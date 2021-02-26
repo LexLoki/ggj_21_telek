@@ -11,7 +11,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     public float Speed;
 
-    public GameObject GameOverScreen;
+    //public GameObject GameOverScreen;
     private float _dir;
     private bool _doJump;
     
@@ -34,6 +34,6 @@ public class PlayerBehaviour : MonoBehaviour
 
     void OnDestroy()
     {
-        GameOverScreen.SetActive(true);
+        //GameOverScreen.SetActive(true);
     }
 }

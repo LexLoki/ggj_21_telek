@@ -22,6 +22,7 @@ public class TouchTeleportTo : MonoBehaviour
         //if(other.tag != "Botao")
         if (other.collider.tag == "Player")
         {
+            Debug.Log("Player tocou em tp");
             if (isKill)
             {
                 //pega checkpoint como destino

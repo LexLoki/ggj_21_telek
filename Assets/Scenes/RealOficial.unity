@@ -5085,6 +5085,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destino: {x: 156.91, y: -23.21, z: 0}
+  isKill: 0
 --- !u!1 &541851548
 GameObject:
   m_ObjectHideFlags: 0
@@ -6771,12 +6772,12 @@ PrefabInstance:
     - target: {fileID: 7286225814332850343, guid: 2a0741fa4fb32f04599ec9accc15e70d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.9
+      value: -153.62
       objectReference: {fileID: 0}
     - target: {fileID: 7286225814332850343, guid: 2a0741fa4fb32f04599ec9accc15e70d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -37.8
+      value: -27.26
       objectReference: {fileID: 0}
     - target: {fileID: 7286225814332850343, guid: 2a0741fa4fb32f04599ec9accc15e70d,
         type: 3}
@@ -14010,6 +14011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destino: {x: 45.94, y: -22.8, z: 0}
+  isKill: 0
 --- !u!1001 &1019184924
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27637,6 +27639,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Void
+      objectReference: {fileID: 0}
+    - target: {fileID: 8402292724023572649, guid: 6d7679efbff199a4fb09f37bb1a2044b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8402292724023572662, guid: 6d7679efbff199a4fb09f37bb1a2044b,
         type: 3}
