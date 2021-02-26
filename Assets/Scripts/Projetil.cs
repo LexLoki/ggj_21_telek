@@ -93,6 +93,8 @@ public class Projetil : MonoBehaviour
         {
             Destroy(other.gameObject);
         }
+        
+        Debug.Log("Tiro bateu em "+ other.collider.name);
         Destroy(gameObject);
     }
 
