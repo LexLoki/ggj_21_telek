@@ -5,6 +5,7 @@ using UnityEngine;
 public class TouchTeleportTo : MonoBehaviour
 {
     public Vector3 destino;
+    public bool isKill = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,8 +22,17 @@ public class TouchTeleportTo : MonoBehaviour
         //if(other.tag != "Botao")
         if (other.collider.tag == "Player")
         {
-            other.gameObject.transform.position = destino;
+            if (isKill)
+            {
+                //pega checkpoint como destino
+                //other.gameObject.transform.position = checkpoint;
+            }
+            else
+            {
+                other.gameObject.transform.position = destino;
+            }
         }
+
         
     }
 

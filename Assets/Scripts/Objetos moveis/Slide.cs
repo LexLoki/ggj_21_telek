@@ -8,15 +8,26 @@ public class Slide : MonoBehaviour
     public float velocidade;
     
     private Vector3 PosIni;
+    private Rigidbody2D rb2D;
     // Start is called before the first frame update
     void Start()
     {
         PosIni= transform.position;
+        rb2D = gameObject.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        transform.position = Vector3.LerpUnclamped(PosIni,PosAlvo,Mathf.Sin(Time.time * velocidade));
+        rb2D.MovePosition(Vector3.LerpUnclamped(PosIni,PosAlvo,Mathf.Sin(Time.time * velocidade)));
+    }
+
+    void OnCollisionStay2D(Collision2D other)
+    {
+        if(other.gameObject.tag == "Player")
+        {
+            Vector3 offset = (other.gameObject.transform.position - this.gameObject.transform.position);
+
+        }
     }
 }

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TouchKill : MonoBehaviour
 {
-    public Vector3 destino;
     // Start is called before the first frame update
     void Start()
     {
