@@ -11,6 +11,8 @@ public class PlayerBehaviour : MonoBehaviour
 
     public float Speed;
 
+    private Vector3 RespawnPoint;
+
     //public GameObject GameOverScreen;
     private float _dir;
     private bool _doJump;
@@ -19,6 +21,11 @@ public class PlayerBehaviour : MonoBehaviour
     {
         _dir = dirX;
         _doJump = doJump;
+    }
+
+    private void Start()
+    {
+        RespawnPoint = this.gameObject.transform.position;
     }
 
     private void Update()
@@ -32,6 +39,14 @@ public class PlayerBehaviour : MonoBehaviour
         //SpriteAnimator.SetFloat("vel_y", CharacterController.Velocity.y);
     }
 
+    public Vector3 GetRespawn()
+    {
+        return RespawnPoint;
+    }
+    public void SetRespawn(Vector3 newRespawn)
+    {
+        RespawnPoint = newRespawn;
+    }
     void OnDestroy()
     {
         //GameOverScreen.SetActive(true);

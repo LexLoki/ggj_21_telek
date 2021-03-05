@@ -22,11 +22,9 @@ public class TouchTeleportTo : MonoBehaviour
         //if(other.tag != "Botao")
         if (other.collider.tag == "Player")
         {
-            Debug.Log("Player tocou em tp");
             if (isKill)
             {
-                //pega checkpoint como destino
-                //other.gameObject.transform.position = checkpoint;
+                other.gameObject.transform.position = other.gameObject.GetComponent<PlayerBehaviour>().GetRespawn();
             }
             else
             {

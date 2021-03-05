@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8099470424348207844}
   - component: {fileID: 1932132895804410438}
   - component: {fileID: 3122939074585622648}
+  - component: {fileID: 9190374000818273332}
   m_Layer: 0
   m_Name: Tiro
   m_TagString: Projetil
@@ -165,3 +166,17 @@ CircleCollider2D:
   m_Offset: {x: 0.000000022152074, y: 0.09291255}
   serializedVersion: 2
   m_Radius: 0.4070876
+--- !u!114 &9190374000818273332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8146157101964607986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fa5d0459f8d03743b9caadb54117335, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destino: {x: 0, y: 0, z: 0}
+  isKill: 1
